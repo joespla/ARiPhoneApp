@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.15" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -269,6 +269,18 @@
                                 <rect key="frame" x="37" y="477" width="334" height="187"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="tKA-Ko-0s9">
+                                <rect key="frame" x="197" y="211" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="sHN-mV-p2k">
+                                <rect key="frame" x="197" y="414" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="c09-Dd-Nal">
+                                <rect key="frame" x="194" y="607" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882352941" green="0.18823529411764706" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4mT-UI-jW2"/>
@@ -277,6 +289,9 @@
                         <outlet property="fotoVista" destination="PTq-Mo-rDH" id="l2E-pp-veT"/>
                         <outlet property="fotoVista2" destination="GdQ-kV-W5e" id="JI2-eg-h57"/>
                         <outlet property="fotoVista3" destination="Hux-O1-LDL" id="FEK-As-vFO"/>
+                        <outlet property="ph1spinner" destination="tKA-Ko-0s9" id="e1I-ne-Rhq"/>
+                        <outlet property="ph2spinner" destination="sHN-mV-p2k" id="abO-Ks-oOG"/>
+                        <outlet property="ph3spinner" destination="c09-Dd-Nal" id="ZL5-Rq-qo1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgq-6Z-9UC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -452,6 +467,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="photosButton:" destination="BL2-zl-94V" eventType="touchUpInside" id="Ots-ej-iG2"/>
                                     <action selector="showPhotos:" destination="BL2-zl-94V" eventType="touchUpInside" id="ola-g5-WVs"/>
                                     <segue destination="TcD-so-rd5" kind="show" id="eAF-j6-ZnS"/>
                                 </connections>

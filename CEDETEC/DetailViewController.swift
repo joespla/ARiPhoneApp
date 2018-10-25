@@ -46,6 +46,10 @@ class DetailViewController: UIViewController {
         urlVideo = URL(string: video)
     }
 
+    @IBAction func photosButton(_ sender: Any) {
+        spinnerPhotos.isHidden = false
+        spinnerPhotos.startAnimating()
+    }
     @IBAction func showPhotos(_ sender: UIButton) {
         aux = 1
     }
@@ -60,33 +64,31 @@ class DetailViewController: UIViewController {
 
     func downloadMultimedia(){
         if let data = try? Data(contentsOf: url!){
-            spinnerPhotos.isHidden = false
-            spinnerPhotos.startAnimating()
             let image : UIImage = UIImage(data: data)!
             image1 = image
         }
         if let data = try? Data(contentsOf: url2!){
-            spinnerPhotos.isHidden = false
-            spinnerPhotos.startAnimating()
             let image: UIImage = UIImage(data: data)!
             image2 = image
         }
         if let data = try? Data(contentsOf: url3!){
-            spinnerPhotos.isHidden = false
-            spinnerPhotos.startAnimating()
             let image: UIImage = UIImage(data: data)!
             image3 = image
         }
 
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        spinnerPhotos.stopAnimating()
+        spinnerPhotos.isHidden = true
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        downloadMultimedia()
         if segue.destination is PhotosViewController{
             let siguienteVista = segue.destination as! PhotosViewController
-            siguienteVista.a = image1
-            siguienteVista.b = image2
-            siguienteVista.c = image3
+            siguienteVista.a = url
+            siguienteVista.b = url2
+            siguienteVista.c = url3
         }
         if segue.destination is ModelViewController{
             let siguienteVista = segue.destination as! ModelViewController

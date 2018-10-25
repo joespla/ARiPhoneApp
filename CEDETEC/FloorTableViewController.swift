@@ -17,7 +17,7 @@ class FloorTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nuevoArray = JSONParseArray(datosJSON)
-        self.tableView.backgroundColor = UIColor(red: 0.34, green: 0.69, blue: 0.98, alpha: 1.0)
+        self.tableView.backgroundColor = UIColor(red: 0.18, green: 0.19, blue: 0.20, alpha: 1.0)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

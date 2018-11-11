@@ -265,11 +265,28 @@
                                 <rect key="frame" x="197" y="211" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ9-Hg-wKc">
+                                <rect key="frame" x="212" y="343" width="159" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.61960784310000006" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextPhoto:" destination="TcD-so-rd5" eventType="touchUpInside" id="Hjk-sJ-Zwt"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiD-sz-Rht">
                                 <rect key="frame" x="37" y="343" width="167" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.43529411759999997" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
                                 <state key="normal" title="Previous">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -282,12 +299,12 @@
                                     <action selector="prevPhoto:" destination="TcD-so-rd5" eventType="touchUpInside" id="rjP-Yq-GTM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ9-Hg-wKc">
-                                <rect key="frame" x="212" y="343" width="159" height="104"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gr-Sl-coT">
+                                <rect key="frame" x="37" y="455" width="334" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.14901960780000001" green="0.61960784310000006" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <state key="normal" title="Next">
+                                <color key="backgroundColor" red="0.56470588239999997" green="0.82352941180000006" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <state key="normal" title="WHAT IS THIS?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -296,7 +313,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextPhoto:" destination="TcD-so-rd5" eventType="touchUpInside" id="Hjk-sJ-Zwt"/>
+                                    <segue destination="lBw-oy-2O1" kind="show" id="Evp-kb-P4a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -311,6 +328,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgq-6Z-9UC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1469.5652173913045" y="2520.6521739130435"/>
+        </scene>
+        <!--Ar Camara View Controller-->
+        <scene sceneID="tK8-At-3WJ">
+            <objects>
+                <viewController id="lBw-oy-2O1" customClass="arCamaraViewController" customModule="CEDETEC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1fI-8d-pW9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjk-nF-z5w">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="paM-lN-4Kb" appends="YES" id="SP5-gR-cb2"/>
+                                </connections>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KGu-qN-FRN"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="xjk-nF-z5w" id="psl-Ga-TQ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTz-EW-B1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="paM-lN-4Kb">
+                    <connections>
+                        <action selector="tapEjecutado:" destination="lBw-oy-2O1" id="71g-e5-rt6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1469.5652173913045" y="3207.880434782609"/>
         </scene>
         <!--Model View Controller-->
         <scene sceneID="V8X-xW-vQt">
@@ -602,6 +652,6 @@
         <image name="second" width="39.724136352539062" height="39.724136352539062"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MlS-cI-Oh9"/>
+        <segue reference="pYM-Vm-3PH"/>
     </inferredMetricsTieBreakers>
 </document>

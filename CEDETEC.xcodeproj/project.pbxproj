@@ -19,6 +19,8 @@
 		37C0B63E214849410014F576 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C0B63C214849410014F576 /* Main.storyboard */; };
 		37C0B640214849420014F576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C0B63F214849420014F576 /* Assets.xcassets */; };
 		37C0B643214849420014F576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C0B641214849420014F576 /* LaunchScreen.storyboard */; };
+		37D19DA82198AD4D003E3655 /* arCamaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D19DA72198AD4D003E3655 /* arCamaraViewController.swift */; };
+		37D19DAA2198AD97003E3655 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 37D19DA92198AD97003E3655 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		37C0B63F214849420014F576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37C0B642214849420014F576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37C0B644214849420014F576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37D19DA72198AD4D003E3655 /* arCamaraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arCamaraViewController.swift; sourceTree = "<group>"; };
+		37D19DA92198AD97003E3655 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = "../../../../Semana 12/Clase 24/ML+AR/ML+AR/Resnet50.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		37C0B635214849410014F576 /* CEDETEC */ = {
 			isa = PBXGroup;
 			children = (
+				37D19DA92198AD97003E3655 /* Resnet50.mlmodel */,
 				37C0B636214849410014F576 /* AppDelegate.swift */,
 				37C0B638214849410014F576 /* FirstViewController.swift */,
 				37C0B63A214849410014F576 /* SecondViewController.swift */,
@@ -81,6 +86,7 @@
 				37B0420A21811EFA009282A5 /* PhotosViewController.swift */,
 				379FB9C0218149C600BC61F8 /* ModelViewController.swift */,
 				3757A7B72181890200C44B06 /* VideosViewController.swift */,
+				37D19DA72198AD4D003E3655 /* arCamaraViewController.swift */,
 			);
 			path = CEDETEC;
 			sourceTree = "<group>";
@@ -157,9 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3757A7B82181890200C44B06 /* VideosViewController.swift in Sources */,
+				37D19DAA2198AD97003E3655 /* Resnet50.mlmodel in Sources */,
 				37C0B63B214849410014F576 /* SecondViewController.swift in Sources */,
 				37C0B637214849410014F576 /* AppDelegate.swift in Sources */,
 				37434ECB214B22C800DBC0FA /* FloorTableViewController.swift in Sources */,
+				37D19DA82198AD4D003E3655 /* arCamaraViewController.swift in Sources */,
 				37434ECF214B436B00DBC0FA /* DetailViewController.swift in Sources */,
 				379FB9C1218149C600BC61F8 /* ModelViewController.swift in Sources */,
 				37B0420B21811EFA009282A5 /* PhotosViewController.swift in Sources */,

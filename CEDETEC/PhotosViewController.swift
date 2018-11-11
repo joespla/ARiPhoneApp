@@ -87,13 +87,7 @@ class PhotosViewController: UIViewController, UIImagePickerControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadImage1(from: a!)
-        downloadImage2(from: b!)
-        downloadImage3(from: c!)
         ph1spinner.startAnimating()
-        //ph2spinner.startAnimating()
-        //ph3spinner.startAnimating()
-        //let photos: [URL?] = [a,b,c]
-        //print(photos)
     }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
@@ -111,46 +105,5 @@ class PhotosViewController: UIViewController, UIImagePickerControllerDelegate {
             }
         }
     }
-    func downloadImage2(from url: URL) {
-        print("Image download started...")
-        getData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            DispatchQueue.main.async() {
-                //self.fotoVista2.image = UIImage(data:data)
-                //self.ph2spinner.stopAnimating()
-               // self.ph2spinner.isHidden = true
-            }
-        }
-    }
-    func downloadImage3(from url: URL) {
-        print("Image download started...")
-        getData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            DispatchQueue.main.async() {
-                //self.fotoVista3.image = UIImage(data:data)
-                //self.ph3spinner.stopAnimating()
-                //self.ph3spinner.isHidden = true
-            }
-        }
-    }
-    func switchImage(){
-        //Something
-    }
-    
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        fotoVista.image = url as? UIImage
-//        picker.dismiss(animated: true, completion: nil)
-//    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

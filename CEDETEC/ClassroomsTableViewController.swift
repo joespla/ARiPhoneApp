@@ -12,8 +12,9 @@ class ClassroomsTableViewController: UITableViewController, UISearchResultsUpdat
 
     var datosFiltrados = [Any]()
     let searchController = UISearchController(searchResultsController: nil)
-    var floor = ""
+    var floor:Any? = ""
     let direccion="https://s3.amazonaws.com/purple-cdtc/laboratorios.json"
+    //let direccioon="http://martinmolina.com.mx/201813/data/a01337002"
     var nuevoArray:[Any]?
     
     
@@ -51,6 +52,7 @@ class ClassroomsTableViewController: UITableViewController, UISearchResultsUpdat
         cell.textLabel?.text=s
         cell.textLabel?.textColor = UIColor.white
         return cell
+        
     }
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
